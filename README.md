@@ -7,11 +7,11 @@ Desenvolvi com a framework Django e RestFramewok uma api que consome os principa
         quantidade = models.BigIntegerField('Quantidade')
         valor_unitario = models.DecimalField('Valor unitário', max_digits=7, decimal_places = 2)
 
-    class  Meta:
-        verbose_name_plural = 'Flores'
-
-    def __str__(self):
-        return f'Nome da flor: {self.nome}, Quantidade: {self.quantidade}, Valor: {self.valor_unitario:.2f}R$'**
+        class  Meta:
+            verbose_name_plural = 'Flores'
+    
+        def __str__(self):
+            return f'Nome da flor: {self.nome}, Quantidade: {self.quantidade}, Valor: {self.valor_unitario:.2f}R$'**
     
 Esta classe é a estrutura do banco de dados.
 nome com valor único, quantidade e valor unitário de preço de cada flor.
