@@ -12,6 +12,7 @@ Desenvolvi com a framework Django e RestFramewok uma api que consome os principa
 
     def __str__(self):
         return f'Nome da flor: {self.nome}, Quantidade: {self.quantidade}, Valor: {self.valor_unitario:.2f}R$'**
+    
     Esta classe é a estrutura do banco de dados.
     nome com valor único, quantidade e valor unitário de preço de cada flor.
 
@@ -24,7 +25,7 @@ class FlorAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Flor.objects.all()
     serializer_class = FlorSerializers
 
-Da camada MVC
+    Da camada MVC
 
 
 class FlorSerializers(serializers.ModelSerializer):
@@ -32,4 +33,4 @@ class FlorSerializers(serializers.ModelSerializer):
         model = Flor
         fields = '__all__'
         
-Processo de serializaçã
+    Processo de serialização
